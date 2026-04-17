@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Setup Container -->
+            <LinearLayout
+                android:id="@+id/setupContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_shield"
+                    app:tint="@color/primary"
+                    android:layout_marginBottom="24dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    style="@style/TextHeadlineSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_factor_auth"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    style="@style/TextBodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_factor_description"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="24dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/demoCodeText"
+                    style="@style/TextBodyMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/demo_mode_message"
+                    android:textColor="@color/primary"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:background="@color/primary_container"
+                    android:layout_marginBottom="24dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/sendCodeBtn"
+                    style="@style/MainButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/enable_2fa" />
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    style="@style/OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/cancel"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+            <!-- Verify Container -->
+            <LinearLayout
+                android:id="@+id/verifyContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_shield"
+                    app:tint="@color/primary"
+                    android:layout_marginBottom="24dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    style="@style/TextHeadlineSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verify_identity"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    style="@style/TextBodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_verification_code"
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginBottom="24dp"
+                    android:layout_gravity="center" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/verification_code"
+                    app:startIconDrawable="@drawable/ic_lock">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/codeInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="6" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/timerText"
+                    style="@style/TextLabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/text_secondary"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/resendText"
+                    style="@style/TextLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resend_code"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:enabled="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/verifyBtn"
+                    style="@style/MainButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/verify"
+                    android:layout_marginTop="24dp" />
+
+                <Button
+                    android:id="@+id/backBtn"
+                    style="@style/OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="@string/back"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

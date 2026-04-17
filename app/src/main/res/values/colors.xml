@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Primary Color-->
+    <color name="primary">#8A4F7D</color>
+    <color name="primary_dark">#693B5F</color>
+    <color name="primary_light">#E8D5E4</color>
+    <color name="on_primary">#FFFFFFFF</color>
+
+    <color name="primary_container">#F3E5F5</color>
+    <color name="on_primary_container">#4A2C42</color>
+
+    <!--Secondary Color-->
+    <color name="secondary">#F4B740</color>
+    <color name="secondary_dark">#D49A2C</color>
+    <color name="secondary_light">#FFE5A3</color>
+    <color name="on_secondary">#FF000000</color>
+
+    <color name="secondary_container">#FFF8E7</color>
+    <color name="on_secondary_container">#4A3E1F</color>
+
+    <!--Tertiary Color-->
+    <color name="tertiary">#4CAF50</color>
+    <color name="on_tertiary">#000000</color>
+    <color name="tertiary_container">#FFEFCF</color>
+    <color name="on_tertiary_container">#2B1F00</color>
+
+    <!--Error Color-->
+    <color name="error">#BA1A1A</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="error_container">#FFDAD6</color>
+    <color name="on_error_container">#410002</color>
+
+    <!--Text-->
+    <color name="text_primary">#1C1B1F</color>
+    <color name="text_secondary">#49454F</color>
+    <color name="text_hint">#79747E</color>
+    <color name="text_disabled">#BDBDBD</color>
+
+    <!--Background Color-->
+    <color name="background">#FEF7FF</color>
+    <color name="on_background">#1C1B1F</color>
+
+    <!--Card Color-->
+    <color name="surface">#FFFFFF</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="surface_variant">#F5F0F5</color>
+    <color name="on_surface_variant">#4A4450</color>
+    <color name="surface_container">#E9ECEF</color>
+
+    <!--Border Color-->
+    <color name="outline">#7A7C82</color>
+    <color name="outline_variant">#CAC4D0</color>
+
+    <!--Inverse Color-->
+    <color name="inverse_surface">#313033</color>
+    <color name="inverse_on_surface">#F4EFF4</color>
+    <color name="inverse_primary">#D9B0D0</color>
+
+    <!--Divider-->
+    <color name="divider">#E0E0E0</color>
+
+    <!--Status Color-->
+    <color name="success">#4CAF50</color>
+    <color name="success_container">#C8E6C9</color>
+    <color name="warning">#FFC107</color>
+    <color name="warning_container">#FFECB3</color>
+    <color name="info">#2196F3</color>
+    <color name="info_container">#BBDEFB</color>
+    <color name="strength_container">#FFE4E9</color>
+    <color name="cardio_container">#E3F2FD</color>
+    <color name="beginner_container">#E8F5E9</color>
+
+</resources>

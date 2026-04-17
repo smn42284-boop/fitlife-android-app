@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <include layout="@layout/toolbar_base" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Confetti Container -->
+            <include layout="@layout/confetti_view" />
+
+            <!-- Hero Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/workoutImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/workout_placeholder"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.None"
+                app:strokeWidth="0dp"/>
+
+            <!-- Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/workoutName"
+                    style="@style/TextHeadlineSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/workout_full_body"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/workoutDescription"
+                    style="@style/TextBodyMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/workout_description_placeholder"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Duration Chip -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/workoutDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_60_min"
+                    app:chipIconTint="@color/primary"
+                    app:chipBackgroundColor="@color/primary_container"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Scheduled Days Section -->
+                <TextView
+                    style="@style/TextTitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scheduled_days"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    style="@style/CardStyle"
+                    android:id="@+id/daysCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_calendar"
+                            android:layout_marginEnd="12dp"
+                            app:tint="@color/primary" />
+
+                        <TextView
+                            android:id="@+id/selectedDaysText"
+                            style="@style/TextBodyMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/not_scheduled"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Exercises Section -->
+                <TextView
+                    style="@style/TextTitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercises"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/exercisesRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Equipment Section -->
+                <TextView
+                    style="@style/TextTitleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/equipment_needed"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/equipmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:id="@+id/equipmentPlaceholder"
+                        style="@style/TextBodyMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_equipment_needed"
+                        android:textColor="@color/text_hint"
+                        android:gravity="center"
+                        android:padding="16dp"/>
+                </LinearLayout>
+
+                <!-- Add/Remove Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addToPlanBtn"
+                    style="@style/MainButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="@string/add_to_plan"
+                    app:icon="@drawable/ic_add"
+                    app:iconGravity="textStart"
+                    android:layout_marginBottom="32dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

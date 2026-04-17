@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/success" />
+            <corners android:radius="20dp" />
+            <padding android:left="12dp" android:right="12dp" android:top="6dp" android:bottom="6dp" />
+        </shape>
+    </item>
+    <item>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✓ DONE"
+            android:textColor="@color/on_primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </item>
+</layer-list>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Skip Button -->
+    <TextView
+        android:id="@+id/skipBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="20dp"
+        android:text="Skip"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:padding="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <!-- Main Content -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:paddingBottom="32dp">
+
+        <!-- Progress Bar instead of Dots -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp">
+
+            <View
+                android:id="@+id/progress1"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_active"
+                android:layout_marginEnd="4dp" />
+
+            <View
+                android:id="@+id/progress2"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_inactive"
+                android:layout_marginHorizontal="4dp" />
+
+            <View
+                android:id="@+id/progress3"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_inactive"
+                android:layout_marginHorizontal="4dp" />
+
+            <View
+                android:id="@+id/progress4"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:layout_weight="1"
+                android:background="@drawable/progress_inactive"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Next/Get Started Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextBtn"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Next"
+            app:icon="@drawable/ic_chevron_right"
+            app:iconGravity="textEnd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/getStartedBtn"
+            style="@style/MainButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Get Started"
+            app:icon="@drawable/ic_check"
+            app:iconGravity="textStart"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

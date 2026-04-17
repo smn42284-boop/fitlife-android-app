@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected/Checked -->
+    <item android:color="@color/primary" android:state_checked="true" />
+    <item android:color="@color/primary" android:state_selected="true" />
+
+    <!-- Pressed/Tapped-->
+    <item android:color="@color/primary_dark" android:state_pressed="true" />
+
+    <!-- Focused -->
+    <item android:color="@color/primary_light" android:state_focused="true" />
+
+    <!-- Hovered-->
+    <item android:color="@color/primary_light" android:state_hovered="true" />
+
+    <!-- Activated -->
+    <item android:color="@color/primary" android:state_activated="true" />
+
+    <!-- Default-->
+    <item android:color="@color/text_secondary" />
+</selector>

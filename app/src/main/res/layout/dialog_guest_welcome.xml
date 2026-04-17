@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/surface">
+
+    <!-- Icon -->
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_fitness"
+        app:tint="@color/primary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Title -->
+    <TextView
+        style="@style/TextTitleMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_guest"
+        android:textColor="@color/text_primary"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Message -->
+    <TextView
+        style="@style/TextBodyMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guest_mode_message"
+        android:textColor="@color/text_secondary"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:lineSpacingExtra="2dp" />
+
+    <!-- Buttons -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignUp"
+        style="@style/MainButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/sign_up"
+        android:layout_marginBottom="12dp"
+        app:icon="@drawable/ic_person"
+        app:iconGravity="textStart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinueAsGuest"
+        style="@style/OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/continue_as_guest"
+        app:icon="@drawable/ic_chevron_right"
+        app:iconGravity="textEnd" />
+
+</LinearLayout>
